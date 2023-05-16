@@ -1,4 +1,4 @@
-import { postOneUser, getOneUser } from "../modules/user";
+import { postOneUser, getOneUser, getAllUsers} from "../modules/user";
 import bcrypt from "bcrypt";
 import { Request, Response } from "express";
 
@@ -22,4 +22,14 @@ const postOn = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-export { postOn };
+
+const getUsers = (req: any, res: any) => {
+  const callback = (err: any, result: any) => {
+    if (err) res.status(500).send(err);
+    else res.status(200).send(result);
+  };
+  getAllUsers(callback);
+};
+
+
+export { postOn,getUsers };
