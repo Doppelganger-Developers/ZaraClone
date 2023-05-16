@@ -26,5 +26,12 @@ const getOneUser = async (useremail: string) => {
     });
   });
 };
+const getAllUsers = (callback: (err: any, result: any) => void) => {
+  const sql = "SELECT * FROM user";
+  connection.query(sql, (err: any, result: any) => {
+    callback(err, result);
+  });
+};
 
-export { postOneUser, getOneUser };
+
+export { postOneUser, getOneUser, getAllUsers };
