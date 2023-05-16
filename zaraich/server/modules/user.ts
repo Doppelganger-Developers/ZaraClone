@@ -34,4 +34,5 @@ const getAllUsers = (callback: (err: any, result: any) => void) => {
 };
 
 
+
 export { postOneUser, getOneUser, getAllUsers };

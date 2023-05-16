@@ -23,7 +23,7 @@ const postOn = async (req: Request, res: Response): Promise<void> => {
 };
 
 
-const getUsers = (req: any, res: any) => {
+const getUsers = (req: Request, res: Response) => {
   const callback = (err: any, result: any) => {
     if (err) res.status(500).send(err);
     else res.status(200).send(result);
