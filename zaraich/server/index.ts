@@ -1,10 +1,18 @@
-const express=require("express")
-const connectio=require("./config.ts")
-const app= express()
+import express, { Express } from 'express';
+import connection from './config';
+import cors from 'cors';
+import post from "./routes/user"
+const app: Express = express();
 
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/user",post)
+connection;
 
-app.get("/", (req:any,res:any)=>{
-    return res.send("hello")
-})
+// Setting the port and listening for connections
+const port: number = 5000;
 
-app.listen(5000,()=>console.log("listening to port 5000"))
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
