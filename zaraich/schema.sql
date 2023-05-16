@@ -18,7 +18,7 @@ USE `zara` ;
 -- Table `zara`.`user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `zara`.`user` (
-  `userid` INT NOT NULL,
+  `userid` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(65) NULL,
   `useremail` VARCHAR(80) NOT NULL,
   `userpw` VARCHAR(200) NOT NULL,

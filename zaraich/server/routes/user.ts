@@ -1,6 +1,7 @@
-const express = require('express');
-const router = express.Router();
-import postOn from "../controller/user"
-router.post("/",postOn)
+import express, { Router } from 'express';
+import { postOn } from '../controller/user';
 
-module.exports= {router}
+const router: Router = express.Router();
+router.post('/', postOn);
+
+export default router;

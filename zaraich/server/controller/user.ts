@@ -1,10 +1,12 @@
-const {postOneUser,getOneUser}=require("../modules/user.ts")
-const bcrypt=require('bcrypt')
-const postOn = async (req: any, res: any) => {
+import { postOneUser, getOneUser } from "../modules/user";
+import bcrypt from "bcrypt";
+import { Request, Response } from "express";
+
+const postOn = async (req: Request, res: Response): Promise<void> => {
   try {
-    const dbUser = await getOneUser(req.body.useremail);
+    const dbUser:any = await getOneUser(req.body.useremail);
     if (dbUser.length > 0) {
-      res.status(409).send('User already exists');
+      res.status(409).send("User already exists");
       return;
     }
     const hashedPassword = await bcrypt.hash(req.body.userpw, 10);
@@ -20,4 +22,4 @@ const postOn = async (req: any, res: any) => {
   }
 };
 
-export default {postOn}
+export { postOn };
