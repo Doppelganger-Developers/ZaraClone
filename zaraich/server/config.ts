@@ -18,4 +18,4 @@ connection.connect((error) => {
   console.log("Database connected successfully!");
 });
 
-export default connection;
+export default connection
