@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `zara`.`products` (
   `productcolor` VARCHAR(70) NOT NULL,
   `productcategory` VARCHAR(60) NOT NULL,
   `product sub category` VARCHAR(60) NULL,
-  `type` VARCHAR(45) NOT NULL,
+  `producttype` VARCHAR(45) NOT NULL,
   `user_userid` INT NOT NULL,
   PRIMARY KEY (`productid`, `user_userid`),
   INDEX `fk_products_user_idx` (`user_userid` ASC) VISIBLE,
