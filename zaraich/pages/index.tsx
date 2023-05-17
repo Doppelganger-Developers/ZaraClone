@@ -1,8 +1,16 @@
+"use client"
+import React,{useState} from 'react';
 import Link from 'next/link';
 import './globals.css';
 import './index.css';
 
-export default function Home() {
+const Home = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+console.log(sidebarOpen);
+
+  const handleToggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   return (
     <div>
       <nav className="">
@@ -11,7 +19,7 @@ export default function Home() {
             <div>
               <Link href="/">
                 
-                  <svg viewBox="0 0 100 80" width="25" height="25">
+                  <svg viewBox="0 0 100 80" width="25" height="25" onClick={handleToggleSidebar}>
                     <rect width="70" height="5"></rect>
                     <rect y="30" width="70" height="5"></rect>
                     <rect y="60" width="70" height="5"></rect>
@@ -60,7 +68,16 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        {sidebarOpen && (
+        <div className="sidebar">
+          <a href="/">FEMME</a>
+          <a href="/">HOMME</a>
+          <a href="/">ENFANT</a>
+          <a href="/">BEAUTY</a>
+        </div>
+      )}
       </nav>
     </div>
   );
 }
+export default Home;
