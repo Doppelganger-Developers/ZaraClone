@@ -2,13 +2,15 @@ import express, { Express } from 'express';
 import connection from './config';
 import cors from 'cors';
 import post from "./routes/user"
+import prouter from './routes/product';
 const app: Express = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/user",post)
-app.use("/api/user",post)
+app.use("/api/",prouter)
+
 
 connection;
 
