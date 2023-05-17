@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+img {
+  width:200px;
+  height:90px;
+  position: relative;
+  right:20%
+}
+
+.left-logos {
+  display: flex;
+  gap : 20px;
+  position: relative;
+  top:-30px;
+  font-size: 12px;
+  right:12px
+  
+}
+
+.recherche {
+  position: relative;
+  right:20%;
+  width: 120px;
+  border-bottom: solid 1px  #000;
+  
+}
+
+
+body {
+  background-image: url("https://static.zara.net/photos///contents/mkt/spots/ss23-north-woman-new/subhome-xmedia-20//w/1920/IMAGE-landscape-fill-c858f95e-9272-423c-a1ee-40e7dfd5b638-default_0.jpg?ts=1684136380997");
+  background-size: cover
+}
