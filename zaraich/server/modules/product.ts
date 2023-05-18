@@ -19,5 +19,26 @@ const getAllMen = (callback: (err: any, result: any) => void) => {
       });
     });
   };
+
+  const getAllWommen = (callback: (err: any, result: any) => void) => {
+    const sql = `SELECT * FROM products WHERE producttype="wommen"`;
+    connection.query(sql, (err: any, result: any) => {
+      callback(err, result);
+    });
+  };
+
+  const getAllEnfants = (callback: (err: any, result: any) => void) => {
+    const sql = `SELECT * FROM products WHERE producttype="enfants"`;
+    connection.query(sql, (err: any, result: any) => {
+      callback(err, result);
+    });
+  };
+
+  const getAllBeauty = (callback: (err: any, result: any) => void) => {
+    const sql = `SELECT * FROM products WHERE producttype="beuaty"`;
+    connection.query(sql, (err: any, result: any) => {
+      callback(err, result);
+    });
+  };
   
-  export {getAllMen,getOneProduct}
+  export {getAllMen,getOneProduct,getAllWommen,getAllEnfants,getAllBeauty}
