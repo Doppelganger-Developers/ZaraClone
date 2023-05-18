@@ -57,7 +57,8 @@ const loginUser = async (req: Request, res: Response): Promise<void> => {
 
       res.status(200).json({
         token: token,
-        message: "Authentication successful"
+        message: "Authentication successful",
+        name:dbUser[0].username
       });
     } else {
       res.status(400).send("Wrong password");
