@@ -4,7 +4,7 @@ dotenv.config();
 
 const db = {
   host: "localhost",
-  user: 'root',
+  user: "root",
   password: "root",
   database: "zara",
 };
