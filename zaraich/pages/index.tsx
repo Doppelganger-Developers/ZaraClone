@@ -3,14 +3,8 @@ import React,{useState} from 'react';
 import Link from 'next/link';
 import './globals.css';
 import './index.css';
-import React, { useState } from 'react';
 
-const Home: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
-  const handleToggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
 
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -21,8 +15,10 @@ console.log(sidebarOpen);
   };
   return (
     <div>
-      <nav className="">
-        <div className="flex justify-between items-center p-5">
+ 
+<div className="slider">
+<nav className="navBar fixed top-0 z-10 w-full  ">
+        <div className=" flex justify-between items-center p-5">
           <div className="grid gap-1 grid-cols-2">
             <div>
               <Link href="/">
@@ -76,17 +72,38 @@ console.log(sidebarOpen);
             </Link>
           </div>
         </div>
-        {sidebarOpen && (
-        <div className="sidebar">
-          <a href="/">FEMME</a>
-          <a href="/">HOMME</a>
-          <a href="/">ENFANT</a>
-          <a href="/">BEAUTY</a>
-        </div>
-      )}
+        
       </nav>
+     
+      {sidebarOpen && (
+
+<div className="sidebar fixed top-0 z-10">
+  <div className='container'>
+  <svg width="20  px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>setSidebarOpen(!sidebarOpen)} className='closeSvg'>
+<g id="Menu / Close_LG">
+<path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+<div className='elements'>
+  <a href="/" >FEMME</a>
+  <a href="/">HOMME</a>
+  <a href="/">ENFANTS</a>
+  <a href="/">BEAUTY</a>
+  </div>
+</div>
+</div>
+)}
+      <div className="slide">
+          <video className="slide-video" autoPlay loop muted>
+            <source src="../public/video_zarahome.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="slide"></div>
+        <div className="slide"></div>
+        <div className="slide"></div>
+        <div className="slide"></div>
+      </div>
     </div>
   );
 }
-export default Home;
 export default Home;
