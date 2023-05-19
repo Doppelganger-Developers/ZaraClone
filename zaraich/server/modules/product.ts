@@ -7,8 +7,8 @@ const getAllMen = (callback: (err: any, result: any) => void) => {
       callback(err, result);
     });
   };
-  const getOneProduct = async (productid) => {
-    const sql = `SELECT * FROM products where productid="${productid}"`;
+  const getOneProduct = async (productname) => {
+    const sql = `SELECT * FROM products where productname="${productname}"`;
     return new Promise((resolve, reject) => {
       connection.query(sql, (err: any, result: any) => {
         if (err) {
