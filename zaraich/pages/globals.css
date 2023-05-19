@@ -61,12 +61,7 @@ img {
   font-size: 12px;
 }
 
-.sidebar a:hover {
-  font-weight: bold;
-}
-.sidebar a:active {
-  font-weight: bold;
-}
+
 
 .container {
   position: relative;
@@ -83,13 +78,87 @@ img {
 
 
 .elements {
+  display: flex;
+  flex-direction: row;
+  gap:20px;
   position: relative;
   top:30px;
-  margin-left: 19px;
+  margin-left: 25px;
+ 
+  font-size: 12px;
+
   
 }
 
+.elements:hover {
+  cursor: pointer;
+ 
+}
 
+.homme:hover {
+  font-weight: bold;
+ 
+}
+
+.homme.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.homme.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(43% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+.femme:hover {
+  font-weight: bold;
+ 
+}
+.femme.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.femme.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(40% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+.enfants:hover {
+  font-weight: bold;
+ 
+}
+.enfants.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.enfants.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(40% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+
+.beauty:hover {
+  font-weight: bold;
+ 
+}
+.beauty.active {
+  font-weight: bold;
+ 
+}
 .slider {
   overflow: hidden;
   width: 100vw;
@@ -154,3 +223,21 @@ img {
  }
 
 
+.container1 {
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+  margin-top: 110px;
+  margin-left: 25px;
+  
+}
+
+.container1 > div {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.container1 > div:hover,
+.container1 > div.active {
+  font-weight: bold
+}
