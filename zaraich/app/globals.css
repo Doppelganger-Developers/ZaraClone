@@ -16,12 +16,184 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+img {
+  width:200px;
+  height:90px;
+  position: relative;
+  right:20%
+}
+
+.left-logos {
+  display: flex;
+  gap : 20px;
+  position: relative;
+  top:-30px;
+  font-size: 12px;
+  right:12px
+  
+}
+
+.recherche {
+  position: relative;
+  right:20%;
+  width: 120px;
+  border-bottom: solid 1px  #000;
+  display: none;
+
+  
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 29.29vw;
+  background-color: white;
+  opacity: 0.98;
+}
+
+.sidebar a {
+  display: fixed;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+
+
+.container {
+  position: relative;
+  top:40px
+}
+
+.closeSvg {
+  position: relative;
+  top:-20px;
+  right:190px;
+  opacity: 0.9;
+}
+
+
+
+.elements {
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  position: relative;
+  top:30px;
+  margin-left: 25px;
+ 
+  font-size: 12px;
+
+  
+}
+
+.elements:hover {
+  cursor: pointer;
+ 
+}
+
+.homme:hover {
+  font-weight: bold;
+ 
+}
+
+.homme.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.homme.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(43% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+.femme:hover {
+  font-weight: bold;
+ 
+}
+.femme.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.femme.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(40% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+.enfants:hover {
+  font-weight: bold;
+ 
+}
+.enfants.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.enfants.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(40% - 1px); /* Adjust this value to control the width */
+  width: 8px; /* Adjust this value to control the thickness */
+  height: 1%; /* Adjust this value to control the height */
+  background-color: #000;
+}
+
+.beauty:hover {
+  font-weight: bold;
+ 
+}
+.beauty.active {
+  font-weight: bold;
+ 
+}
+
+.helpContainer {
+  background-image: url("https://static.zara.net/photos///contents/mkt/spots/ss23-help-customer/subhome-xmedia-10-north//w/1899/IMAGE-landscape-web-27470945-8c31-433a-9eaf-392114b6a91d-default_0.jpg?ts=1682518360676");
+  background-size: cover;
+  height: 100vh;
+}
+
+.helpQ {
+ 
+  font-size: 13.5px;
+  position: relative;
+  top:8.5%;
+  left: 12%;
+  font-weight:500;
+}
+
+
+.SearchInput {
+  background: none;
+  font-weight: 400;
+  color : #000;
+  font-size: 12px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  top:12.5%;
+  left: 12%;
+  
+}
+
+.Line {
+  position: relative;
+  top:13.5%;
+  left: 12%;
+  border-bottom: solid 1px #000;
+  width: 38%;
 }
