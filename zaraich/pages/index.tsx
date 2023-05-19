@@ -113,7 +113,7 @@ const Home = () => {
      handleDivClick(3)
     setHommeShow('beauty')
     
-  }}>BEAUTY</div>
+  }}><Link href="/beauty">BEAUTY</Link></div>
   </div>
  
 </div>
