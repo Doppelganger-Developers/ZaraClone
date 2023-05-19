@@ -10,9 +10,9 @@ const getMen = async (req: Request, res: Response):Promise<void>=> {
   };
   const getOneP =async (req: Request, res: Response):Promise<void>=> {
    try{
-     const prod=req.body.productid;
-    await getOneProduct(prod)
-    res.status(20).send(prod);
+     const one=req.params.productid;
+    await getOneProduct(one)
+    res.status(200).send();
 }
  catch (error) {
     res.status(500).send(error);
