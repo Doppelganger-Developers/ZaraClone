@@ -3,12 +3,19 @@ import React,{useState} from 'react';
 import Link from 'next/link';
 import './globals.css';
 import './index.css';
-
-
+import HommeCategory from './hommeCategory';
+import FemmeCategory from './femmeCategory';
+import EnfantCategory from './enfantCategory';
 
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-console.log(sidebarOpen);
+  const [hommeShow, setHommeShow] = useState('homme')
+  const [activeDiv, setActiveDiv] = useState(0);
+
+  const handleDivClick = (index:number) => {
+    setActiveDiv(index);
+  };
+
 
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -85,12 +92,32 @@ console.log(sidebarOpen);
 </g>
 </svg>
 <div className='elements'>
-  <a href="/" >FEMME</a>
-  <a href="/">HOMME</a>
-  <a href="/">ENFANTS</a>
-  <a href="/">BEAUTY</a>
+  <div  className={`femme ${activeDiv === 0 ? 'active' : ''}`} onClick={()=>{
+    handleDivClick(0)
+    setHommeShow('femme')
+    
+  }}>FEMME</div>
+  <div className={`homme ${activeDiv === 1 ? 'active' : ''}`}
+       
+         onClick={()=>{
+          handleDivClick(1)
+    setHommeShow('homme')
+    
+  }} >HOMME</div>
+  <div   className={`enfants ${activeDiv === 2 ? 'active' : ''}`} onClick={()=>{
+     handleDivClick(2)
+    setHommeShow('enfants')
+    
+  }}>ENFANTS</div>
+  <div   className={`beaty ${activeDiv === 3 ? 'active' : ''}`} onClick={()=>{
+     handleDivClick(3)
+    setHommeShow('beauty')
+    
+  }}>BEAUTY</div>
   </div>
+ 
 </div>
+{hommeShow ==='homme'?<HommeCategory/>:hommeShow ==='femme'?<FemmeCategory/>:hommeShow ==='enfants'?<EnfantCategory/>:null}
 </div>
 )}
       <div className="slide">
