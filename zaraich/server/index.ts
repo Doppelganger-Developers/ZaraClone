@@ -4,6 +4,7 @@ import cors from 'cors';
 import post from "./routes/user"
 import prouter from './routes/product';
 import hrouter from './routes/help'
+import crouter from './routes/prodcategory';
 const app: Express = express();
 connection;
 app.use(cors());
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user",post)
 app.use("/api/",prouter)
 app.use("/api/",hrouter);
+app.use("/api/",crouter)
 
 
 
