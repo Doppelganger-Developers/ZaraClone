@@ -51,8 +51,6 @@ const loginUser = async (req: Request, res: Response): Promise<void> => {
         },
         "123"
       );
-
-      // Save the token in local storage
       res.cookie('jwt', token, { httpOnly: true });
 
       res.status(200).json({

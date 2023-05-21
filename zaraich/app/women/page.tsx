@@ -1,11 +1,12 @@
 "use client"
 import axios from "axios"
 import React,{ useEffect, useState } from 'react';
+import "./globals.css" 
 
 const Women=()=>{
     const [data,setData]=useState([])
     const fetchCategory=()=>{
-    axios.get(`http://localhost:5000/api/Women`)
+    axios.get(`http://localhost:5000/api/c/pwomen`)
     .then(suc=>setData(suc.data))
     .catch(err=>console.log(err))
       }

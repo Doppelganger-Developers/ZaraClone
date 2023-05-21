@@ -43,4 +43,29 @@ img {
 }
 body{
   background-color: #fff;
+  
 }
+.parent {
+  display: flex;
+  justify-content: cent;
+  width: 100%;
+}
+.prodimg{
+  width: 598.33px;
+  height: 897.48px;
+  left: 635px;
+}
+.prodprice {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 213px;
+}
+
+.prodname {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 223px;
+}
+

@@ -1,13 +1,12 @@
 "use client"
 import axios from "axios"
 import React,{ useEffect, useState } from 'react';
-
 import  "./globals.css"
 
 const Men=()=>{
     const [data,setData]=useState([])
     const fetchCategory=()=>{
-    axios.get(`http://localhost:5000/api/Men`)
+    axios.get(`http://localhost:5000/api/p/Men`)
     .then(suc=>setData(suc.data))
     .catch(err=>console.log(err))
       }
@@ -25,7 +24,7 @@ console.log(data)
                     <div className="prodprice">{e.productprice} TND</div>
                     </div>
                     
-                    </div>
+                    </div>  
                     )
             }
         </div>

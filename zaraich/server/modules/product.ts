@@ -26,7 +26,6 @@ const getAllMen = (callback: (err: any, result: any) => void) => {
       });
     });
   };
-
   const getAllWommen = (callback: (err: any, result: any) => void) => {
     const sql = `SELECT * FROM products WHERE producttype="Women"`;
     connection.query(sql, (err: any, result: any) => {
