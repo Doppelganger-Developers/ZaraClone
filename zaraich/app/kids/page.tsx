@@ -1,11 +1,12 @@
 "use client"
 import axios from "axios"
 import React,{ useEffect, useState } from 'react';
+import "./page.css"
 
 const Kids=()=>{
     const [data,setData]=useState([])
     const fetchCategory=()=>{
-    axios.get(`http://localhost:5000/api/Kids`)
+    axios.get(`http://localhost:5000/api/c/pkids`)
     .then(suc=>setData(suc.data))
     .catch(err=>console.log(err))
       }

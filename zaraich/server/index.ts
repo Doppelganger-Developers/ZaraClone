@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/user",post)
-app.use("/api/",prouter)
-app.use("/api/",hrouter);
-app.use("/api/",crouter)
+app.use("/api/p",prouter)
+app.use("/api/h",hrouter);
+app.use("/api/c",crouter)
 
 
 
